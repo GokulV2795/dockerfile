@@ -1,10 +1,10 @@
 steps:
 # Step 1: Build the Docker image
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/silver-ivy-406512/sanjay-awesome:$COMMIT_SHA', '.']
+  args: ['build', '-t', 'gcr.io/gcpbatch5-408003/dockerfile:$COMMIT_SHA', '.']
 
 # Step 2: Push the Docker image to Container Registry
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/silver-ivy-406512/sanjay-awesome:$COMMIT_SHA']
+  args: ['push', 'gcr.io/gcpbatch5-408003/dockerfile:$COMMIT_SHA']
 
-images: ['gcr.io/silver-ivy-406512/sanjay-awesome:$COMMIT_SHA']
+images: ['gcr.io/gcpbatch5-408003/dockerfile:$COMMIT_SHA']
